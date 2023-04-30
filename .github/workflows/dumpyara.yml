@@ -20,9 +20,8 @@ jobs:
 
        - name: Clone Dumprx
          run: |
-              git clone --depth=1 https://github.com/WisnuArdhi28/DumprX
-              
-              
+              git clone --depth=1 https://github.com/Hoppless/DumprX
+
        - name: Setup Dumprx environment
          working-directory: DumprX
          run: |
@@ -32,13 +31,13 @@ jobs:
          working-directory: DumprX
          run: |
               NAME_OF_THIS_REPO="dumper"
-              GITHUB_ORG_NAME="gudang-dump"
-              GITHUB_USERNAME="WisnuArdhi28"
-              GIT_CONFIG_USERNAME="WisnuArdhi28"
-              GIT_CONFIG_EMAIL="wisnuardi128@gmail.com"
-              GIT_GITHUB_TOKEN="${{ secrets.GIT_GITHUB_TOKEN }}"
-              TG_BOT_TOKEN="${{ secrets.TG_BOT_TOKEN }}"
-              TG_CHAT="@TPS_45"
+              GITHUB_ORG_NAME="Hopireika"
+              GITHUB_USERNAME="Hoppless"
+              GIT_CONFIG_USERNAME="Hoppless"
+              GIT_CONFIG_EMAIL="hoppless@proton.me"
+              GIT_GITHUB_TOKEN="${{ secrets.GH_TOKEN }}"
+              TG_BOT_TOKEN="${{ secrets.TG_TOKEN }}"
+              TG_CHAT="@hopireikach"
               # GITLAB_HOSTNAME="gitgud.io" ## use 'gitlab.com' by default, or use your own gitlab instance, or any public one
               echo "$GITHUB_ORG_NAME" > .github_orgname
               # echo "$GITLAB_HOSTNAME" > .gitlab_instance
@@ -62,4 +61,4 @@ jobs:
               bash dumper.sh "$ROM_URL"
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V13.0.8.0.SKTINXM/miui_PISSARROINGlobal_V13.0.8.0.SKTINXM_78ac6e178f_12.0.zip
+  ROM_URL: 
